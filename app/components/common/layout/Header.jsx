@@ -46,7 +46,7 @@ const Header = () => {
   return (
     <>
       <header className="bg-black text-white relative z-10">
-        <div className=" px-4 lg:px-42">
+        <div className=" container  ">
           <div className="flex items-center justify-between py-5">
             <div className="flex items-center">
               <Image
@@ -58,14 +58,14 @@ const Header = () => {
               />
             </div>
 
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center lg:space-x-12">
               {headerTitles.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   className={` ${
                     pathname == item?.href ? "text-tertiary" : "text-white"
-                  }  hover:text-tertiary transition-colors duration-200 font-medium`}
+                  }  hover:text-tertiary  transition-colors duration-200 font-medium`}
                 >
                   {item.name}
                 </Link>
