@@ -30,9 +30,9 @@ const Header = () => {
               <Image
                 src="/assets/logos/logo.png"
                 alt="Shukran Logo"
-                width={260}
+                width={256}
                 height={100}
-                className="h-[35px]"
+                className=""
               />
             </div>
 

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Heading from "@/app/components/common/Heading";
 
 const steps = [
   {
@@ -27,7 +28,7 @@ const Working = () => {
       className={`py-20 bg-[url('/assets/home/workbg.png')] bg-black/100 overflow-hidden bg-no-repeat bg-cover max-w-full bg-center min-h-[600px] lg:h-[700px] flex items-center`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10">
-        <h1 className="text-4xl md:text-5xl text-white ">How It Works</h1>
+        <Heading color="text-white">How It Works</Heading>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-5   ">
           <div className="relative space-y-18 pt-10 ">

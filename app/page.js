@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowUp, MoveUpRight } from "lucide-react";
 import { ourServices } from "./pagesComponents/home/data";
 import HomeAccordion from "./pagesComponents/home/HomeAccordian";
+import Heading from "./components/common/Heading";
 
 export default function Home() {
   return (
@@ -13,13 +14,13 @@ export default function Home() {
       <div
         className={`bg-[url('/assets/home/1.png')] overflow-hidden bg-no-repeat bg-cover max-w-full bg-center min-h-[600px] lg:h-[700px] flex items-center`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full   ">
           {" "}
           {/* Custom container */}
           <div className=" text-white  ">
             <div className="font-medium">
               <div className="text-xl">Serenity at Its Best</div>
-              <div className="text-2xl lg:text-5xl py-2 leading-normal tracking-wider">
+              <div className="text-2xl lg:text-5xl py-2 leading-normal ">
                 Wakefield's
                 <br />
                 Trusted Minibus & Mobility Transport Provider
@@ -59,9 +60,9 @@ export default function Home() {
       </div>
       <Fleet />
       <Working />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10">
-        <div className="text-3xl sm:text-3xl font-medium text-center mb-10">
-          Make Your Trip Your Way With Us
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 ">
+        <div className="text-center mb-10">
+          <Heading>Make Your Trip Your Way With Us</Heading>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
@@ -96,31 +97,34 @@ export default function Home() {
           ))}
         </div>
       </div>{" "}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full bg-tertiary py-20 rounded-md text-white">
-        <div className="container   max-w-7xl ">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center h-full">
-            <div className="text-2xl lg:text-4xl font-medium text-center lg:text-left ">
+      <div className="container mx-autox  bg-tertiary py-20 rounded-md text-white">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
+          <div>
+            <Heading color="text-white">
               Showcase some <br /> impressive numbers.
-            </div>
+            </Heading>
+          </div>
 
-            <div className="flex   w-full  flex-wrap justify-center items-center gap-8 lg:gap-2">
-              {num_data.map((num, index) => (
-                <div key={index} className="text-center px-10">
-                  <div className="text-2xl lg:text-4xl font-medium ">
-                    {num.value}
-                  </div>
-                  <div className="text-sm  mt-1">{num.label}</div>
+          <div className="flex w-full flex-wrap  items-center gap-6 sm:gap-8 lg:gap-10">
+            {num_data.map((num, index) => (
+              <div
+                key={index}
+                className="text-center px-4 sm:px-6 md:px-8 lg:px-10 max-w-[160px]"
+              >
+                <div className="text-2xl sm:text-3xl lg:text-5xl font-medium">
+                  {num.value}
                 </div>
-              ))}
-            </div>
+                <div className="text-xs sm:text-sm mt-1 text-white/80">
+                  {num.label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>{" "}
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24">
         <div className="flex flex-wrap justify-between items-center mb-5">
-          <div className="text-3xl sm:text-3xl font-medium mb-2">
-            Our Services
-          </div>
+          <Heading>Our Services</Heading>
           <div className="">
             <Link href="#" className="flex items-center gap-1">
               More Services
@@ -193,11 +197,14 @@ export default function Home() {
 
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <h2 className="text-3xl lg:text-4xl font-bold">
+                  {/* <h2 className="text-3xl lg:text-4xl font-bold">
                     From Wakefield,
                     <br />
                     for Wakefield
-                  </h2>
+                  </h2> */}
+                  <Heading color="white leading-normal">
+                    From Wakefield, <br /> for Wakefield
+                  </Heading>
 
                   <p className="text-gray-300 text-lg leading-relaxed">
                     We are a local business serving Wakefield and nearby areas.
@@ -214,22 +221,18 @@ export default function Home() {
         </div>
       </div>
       <HomeAccordion />
-      <div className="bg-tertiary my-24 lg:py-28 lg:relative overflow-hidden min-h-[580px]">
+      <div className="bg-tertiary my-24 lg:py-28 lg:relative overflow-hidden ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className=" flex flex-col lg:flex-row items-center justify-between  ">
-            {/* Text content */}
-            <div className="z-10 max-w-md text-white">
-              <h2 className="text-3xl lg:text-5xl font-bold mb-4">
-                Download the app
-              </h2>
-              <p className="text-sm mb-6">
+            <div className="z-10 max-w-md text-white flex flex-col gap-1 lg:gap-2 pt-8 lg:pt-0 ">
+              <Heading color="text-white">Download the app</Heading>
+              <div className="text-sm mb-6">
                 Have a bus booking at your fingertips no matter where you are
                 with our easy-to-use smartphone app.
-              </p>
-              <div className="grid lg:grid-cols-2 gap-4">
-                {/* Apple Store Button */}
+              </div>
+              <div className="grid lg:grid-cols-2 gap-3">
                 <Link href="#" className="group">
-                  <div className="bg-black px-4 py-3 rounded-lg flex items-center gap-3 hover:bg-opacity-80 transition">
+                  <div className="bg-black p-3 rounded-lg flex items-center gap-3 hover:bg-opacity-80 transition">
                     <Image
                       src={"/assets/home/appleicon.png"}
                       alt="Apple Store"
@@ -247,9 +250,8 @@ export default function Home() {
                   </div>
                 </Link>
 
-                {/* Google Play Button */}
                 <Link href="#" className="group">
-                  <div className="bg-black px-4 py-3 rounded-lg flex items-center gap-3 hover:bg-opacity-80 transition">
+                  <div className="bg-black p-3 rounded-lg flex items-center gap-3 group-hover:bg-opacity-80 transition">
                     <Image
                       src={"/assets/home/googleicon.png"}
                       alt="Google Play"
@@ -269,8 +271,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* App screenshot */}
-            <div className=" lg:absolute bottom-0 right-0 lg:top-1/2 lg:right-10 transform lg:-translate-y-1/2 pt-14 z-0 ">
+            <div className=" lg:absolute bottom-0 right-0  z-0 pt-10 lg:pt-0">
               <Image
                 src={"/assets/home/downloadmobile.png"}
                 alt="App screenshot"

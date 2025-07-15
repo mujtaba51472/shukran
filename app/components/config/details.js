@@ -1,3 +1,5 @@
+import { Face } from "@mui/icons-material";
+
 export const details = {
   seodescription:
     "IoT Expert is a leading software development and marketing agency specializing in IoT solutions, web development, mobile app development, SEO, and digital marketing. We provide innovative technology services to help businesses thrive in the digital age.",
@@ -18,4 +20,13 @@ export const details = {
     country: "Pakistan",
   },
   phone1: "+44 22 715 7000",
+  facebook: "#",
+  twitter: "#",
+  instagram: "#",
+  linkedIn: "#",
+  facebookIcon: "/assets/socials/facebook.png",
+  twitterIcon: "/assets/socials/twitter.png",
+  instagramIcon: "/assets/socials/insta.png",
+  linkedInIcon: "/assets/socials/linkdin.png",
+  email: "",
 };

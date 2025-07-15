@@ -1,4 +1,5 @@
 "use client";
+import Heading from "@/app/components/common/Heading";
 import {
   MoveUpRight,
   Users,
@@ -127,7 +128,7 @@ const Fleet = () => {
     <div className=" py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-10">
         <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-semibold">Our Fleet</h2>
+          <Heading>Our Fleet</Heading>
           <div className="flex items-center gap-2 text-primary cursor-pointer hover:underline">
             <span>More Fleet</span>
             <MoveUpRight size={18} />
@@ -136,9 +137,6 @@ const Fleet = () => {
       </div>
 
       <div className="relative">
-        {/* Navigation Arrows - Only show if needed */}
-
-        {/* Carousel Container */}
         <div className="max-w-[1600px] ml-auto px-4  lg:pl-8 w-full py-10  overflow-hidden">
           <div
             className="flex gap-6 transition-transform duration-500 ease-in-out"

@@ -1,9 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
-import { faqData } from './data';
-
-
+import { Plus, Minus } from "lucide-react";
+import { faqData } from "./data";
+import Heading from "@/app/components/common/Heading";
 
 export default function HomeAccordion() {
   const [openIndex, setOpenIndex] = useState(0); // First item open by default
@@ -16,18 +15,15 @@ export default function HomeAccordion() {
     <div className="max-w-4xl mx-auto ">
       <div className="bg-white    overflow-hidden">
         {/* Header */}
-        <div className="bg-white">
-          <h1 className="text-2xl font-bold text-center text-gray-900">
+        <div className="bg-white text-center pb-14">
+          <Heading color="text-black" bold>
             Frequently Asked Questions
-          </h1>
+          </Heading>
         </div>
-        
+
         <div className="bg-white">
           {faqData.map((faq, index) => (
-            <div
-              key={index}
-              className=""
-            >
+            <div key={index} className="">
               <button
                 onClick={() => toggleAccordion(index)}
                 className="w-full px-6 py-4 bg-white cursor-pointer hover:bg-gray-50 flex items-center justify-between transition-colors duration-200 focus:outline-none focus:bg-gray-50 text-left"
@@ -45,16 +41,16 @@ export default function HomeAccordion() {
                   </div>
                 </div>
               </button>
-              
+
               <div
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  openIndex === index
+                    ? "max-h-96 opacity-100"
+                    : "max-h-0 opacity-0"
                 }`}
               >
                 <div className="px-6 py-4 bg-white">
-                  <p className="text-gray-700 leading-relaxed">
-                    {faq.answer}
-                  </p>
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                 </div>
               </div>
             </div>
