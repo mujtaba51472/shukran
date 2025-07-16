@@ -3,7 +3,7 @@ import { num_data, services, trip_data } from "./pagesComponents/home/data";
 import Fleet from "./pagesComponents/home/Fleet";
 import Working from "./pagesComponents/home/Working";
 import Link from "next/link";
-import { ArrowUp, MoveUpRight } from "lucide-react";
+import { MoveUpRight } from "lucide-react";
 import { ourServices } from "./pagesComponents/home/data";
 import HomeAccordion from "./pagesComponents/home/HomeAccordian";
 import Heading from "./components/common/Heading";
