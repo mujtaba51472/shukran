@@ -4,7 +4,7 @@ export const details = {
   seodescription:
     "Ride Mobility is a leading provider of transport and mobility solutions, specializing in innovative and sustainable transportation services. Our mission is to enhance mobility through cutting-edge technology and exceptional customer service.",
   title: "Ride Mobility - Transport and Mobility Solutions",
-  seotitle: "Iot Expert - Software Development and Marketing Agency",
+  seotitle: "Ride Mobility - Transport and Mobility Solutions",
   seokeywords:
     "transport, mobility, solutions, innovative, sustainable, technology, customer service",
   url: "#",
