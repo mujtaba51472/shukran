@@ -26,7 +26,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-end gap-4">
+          <div className="flex items-center justify-end gap-2">
             <div className="text-lg font-medium">Follow Us</div>
             <div className="flex items-center  flex-wrap text-sm text-white/80">
               {social_data.map((item, index) => {
@@ -37,7 +37,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="flex items-center gap-1 hover:text-white transition rounded-full p-2 bg-red-100">
+                    <div className="flex items-center  hover:text-white transition ">
                       <Image
                         src={item.icon}
                         width={50}
