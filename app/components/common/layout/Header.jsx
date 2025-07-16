@@ -27,13 +27,15 @@ const Header = () => {
         <div className=" container   ">
           <div className="flex items-center justify-between py-5">
             <div className="flex items-center">
-              <Image
-                src="/assets/logos/logo.png"
-                alt="Shukran Logo"
-                width={256}
-                height={100}
-                className=""
-              />
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/assets/logos/logo.png"
+                  alt="Shukran Logo"
+                  width={256}
+                  height={100}
+                  className=""
+                />
+              </Link>
             </div>
 
             <nav className="hidden lg:flex items-center lg:space-x-12">

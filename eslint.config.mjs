@@ -21,6 +21,13 @@ const eslintConfig = [
           forbid: [
             { char: ">", alternatives: ["&gt;"] },
             { char: "}", alternatives: ["&rbrace;"] },
+            // Explicitly exclude apostrophe from forbidden characters
+          ],
+          // Add this to specifically allow apostrophes
+          exceptions: [
+            "'", // apostrophe
+            "’", // right single quotation mark
+            "‘", // left single quotation mark
           ],
         },
       ],
