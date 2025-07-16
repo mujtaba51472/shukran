@@ -27,7 +27,7 @@ const Working = () => {
     <div
       className={`py-20 bg-[url('/assets/home/workbg.png')] bg-black/100 overflow-hidden bg-no-repeat bg-cover max-w-full bg-center min-h-[600px] lg:h-[700px] flex items-center`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-28 w-full py-10">
         <Heading color="text-white">How It Works</Heading>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-5   ">

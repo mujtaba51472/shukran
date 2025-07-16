@@ -126,7 +126,7 @@ const Fleet = () => {
 
   return (
     <div className=" py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-28 w-full pt-10">
         <div className="flex items-center justify-between">
           <Heading>Our Fleet</Heading>
           <div className="flex items-center gap-2 text-primary cursor-pointer hover:underline">
@@ -137,100 +137,106 @@ const Fleet = () => {
       </div>
 
       <div className="relative">
-        <div className="max-w-[1600px] ml-auto px-4  lg:pl-8 w-full py-10  overflow-hidden">
-          <div
-            className="flex gap-6 transition-transform duration-500 ease-in-out"
-            style={{
-              transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
-            }}
-          >
-            {fleetData.map((vehicle, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 rounded-xl p-4  border border-gray-200 hover:bg-gray-100 cursor-pointer transition-all duration-300"
-                style={{
-                  width: `calc(${100 / visibleCards}% - ${
-                    ((visibleCards - 1) * 24) / visibleCards
-                  }px)`,
-                  maxWidth: "375px",
-                }}
-              >
-                <h3 className="text-lg font-semibold mb-1">{vehicle.title}</h3>
-                <p className="text-sm text-gray-600 mb-3">
-                  {vehicle.description}
-                </p>
+        <div className="max-w-[1600px] ml-auto px-4  lg:pl-28 w-full py-10  ">
+          <div className=" overflow-hidden">
+            <div
+              className="flex gap-6 transition-transform duration-500 ease-in-out "
+              style={{
+                transform: `translateX(-${
+                  currentIndex * (100 / visibleCards)
+                }%)`,
+              }}
+            >
+              {fleetData.map((vehicle, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 rounded-xl p-4  border border-gray-200 hover:bg-gray-100 cursor-pointer transition-all duration-300"
+                  style={{
+                    width: `calc(${100 / visibleCards}% - ${
+                      ((visibleCards - 1) * 24) / visibleCards
+                    }px)`,
+                    maxWidth: "375px",
+                  }}
+                >
+                  <h3 className="text-lg font-semibold mb-1">
+                    {vehicle.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-3">
+                    {vehicle.description}
+                  </p>
 
-                <div className="w-full h-[140px] relative mb-4">
-                  <Image
-                    src={vehicle.image}
-                    alt={vehicle.title}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
+                  <div className="w-full h-[140px] relative mb-4">
+                    <Image
+                      src={vehicle.image}
+                      alt={vehicle.title}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
 
-                <div className="flex justify-around pt-3 text-gray-800 text-sm">
-                  <div className="flex items-center gap-1">
+                  <div className="flex justify-around pt-3 text-gray-800 text-sm">
+                    <div className="flex items-center gap-1">
+                      <div className="flex items-center gap-1 bg-gray-200 rounded-full p-4">
+                        <Image
+                          src={vehicle.user}
+                          alt="icon"
+                          width={20}
+                          height={16}
+                          className="w-5 h-5"
+                        />
+                      </div>
+                      <span>passengers {vehicle.passengers}</span>
+                    </div>
                     <div className="flex items-center gap-1 bg-gray-200 rounded-full p-4">
                       <Image
-                        src={vehicle.user}
+                        src={vehicle.chair}
                         alt="icon"
                         width={20}
                         height={16}
                         className="w-5 h-5"
                       />
                     </div>
-                    <span>passengers {vehicle.passengers}</span>
-                  </div>
-                  <div className="flex items-center gap-1 bg-gray-200 rounded-full p-4">
-                    <Image
-                      src={vehicle.chair}
-                      alt="icon"
-                      width={20}
-                      height={16}
-                      className="w-5 h-5"
-                    />
-                  </div>
-                  <div className="flex items-center gap-1 bg-gray-200 rounded-full p-4">
-                    <Image
-                      src={vehicle.luggage}
-                      alt="icon"
-                      width={20}
-                      height={16}
-                      className="w-5 h-5"
-                    />
+                    <div className="flex items-center gap-1 bg-gray-200 rounded-full p-4">
+                      <Image
+                        src={vehicle.luggage}
+                        alt="icon"
+                        width={20}
+                        height={16}
+                        className="w-5 h-5"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-          {showArrows && (
-            <div className="flex items-center gap-5 pt-10 ">
-              <button
-                onClick={scrollLeft}
-                disabled={!canScrollLeft}
-                className={`z-10 w-14 h-14 bg-white shadow-2xl border border-gray-300   rounded-full flex items-center justify-center transition-all duration-300 hover:bg-gray-50 ${
-                  !canScrollLeft
-                    ? "opacity-50 cursor-not-allowed"
-                    : "opacity-90 hover:opacity-100 cursor-pointer"
-                }`}
-              >
-                <ArrowLeft size={23} className="text-gray-600" />
-              </button>
-
-              <button
-                onClick={scrollRight}
-                disabled={!canScrollRight}
-                className={` z-10 w-14 h-14 bg-white border border-gray-300 shadow-2xl rounded-full flex items-center justify-center transition-all duration-300 hover:bg-gray-50 ${
-                  !canScrollRight
-                    ? "opacity-50 cursor-not-allowed"
-                    : "opacity-90 hover:opacity-100 cursor-pointer"
-                }`}
-              >
-                <ArrowRight size={23} className="text-gray-600" />
-              </button>
+              ))}
             </div>
-          )}{" "}
+            {showArrows && (
+              <div className="flex items-center gap-5 pt-10 ">
+                <button
+                  onClick={scrollLeft}
+                  disabled={!canScrollLeft}
+                  className={`z-10 w-14 h-14 bg-white shadow-2xl border border-gray-300   rounded-full flex items-center justify-center transition-all duration-300 hover:bg-gray-50 ${
+                    !canScrollLeft
+                      ? "opacity-50 cursor-not-allowed"
+                      : "opacity-90 hover:opacity-100 cursor-pointer"
+                  }`}
+                >
+                  <ArrowLeft size={23} className="text-gray-600" />
+                </button>
+
+                <button
+                  onClick={scrollRight}
+                  disabled={!canScrollRight}
+                  className={` z-10 w-14 h-14 bg-white border border-gray-300 shadow-2xl rounded-full flex items-center justify-center transition-all duration-300 hover:bg-gray-50 ${
+                    !canScrollRight
+                      ? "opacity-50 cursor-not-allowed"
+                      : "opacity-90 hover:opacity-100 cursor-pointer"
+                  }`}
+                >
+                  <ArrowRight size={23} className="text-gray-600" />
+                </button>
+              </div>
+            )}{" "}
+          </div>
         </div>
       </div>
     </div>

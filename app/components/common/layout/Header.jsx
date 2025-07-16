@@ -5,11 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { headerTitles } from "../../config/headerTitles";
-
-// Mock details for demo - replace with your actual import
-const details = {
-  phone1: "+44 22 715 7000",
-};
+import { details } from "../../config/details";
 
 const Header = () => {
   const pathname = usePathname();
@@ -23,7 +19,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="bg-black text-white relative z-10 ">
+      <header className="bg-[#000000] text-white relative z-10 ">
         <div className=" container   ">
           <div className="flex items-center justify-between py-5">
             <div className="flex items-center">
